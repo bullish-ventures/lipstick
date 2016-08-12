@@ -37,9 +37,9 @@ Minified and unminified versions are available over CDN so you can simply includ
 <head>
     <meta charset="UTF-8">
     <title>Lipstick</title>
-    <link rel="stylesheet" href="//npmcdn.com/lipstickless@^0.1.0/dist/lipstick.css">
+    <link rel="stylesheet" href="//npmcdn.com/lipstickless@^0.1.0/dist/css/lipstick.css">
     <!-- Minified Version -->
-    <!-- <link rel="stylesheet" href="//npmcdn.com/lipstickless@^0.1.0/dist/lipstick.min.css"> -->
+    <!-- <link rel="stylesheet" href="//npmcdn.com/lipstickless@^0.1.0/dist/css/lipstick.min.css"> -->
 </head>
 <body>
     
