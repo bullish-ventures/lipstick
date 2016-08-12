@@ -85,12 +85,14 @@ p {
 a {
   color: #dc75ac;
   background: transparent;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:active,
+a:focus,
+a.active,
 a:hover {
   outline: 0;
-  text-decoration: none;
+  text-decoration: underline;
   color: #bb307a;
 }
 h1,
@@ -228,7 +230,7 @@ hr,
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 1px;
-  background: #eee;
+  background: rgba(0, 0, 0, 0.15);
   border: 0;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -241,25 +243,6 @@ ol {
 ul li,
 ol li {
   margin-bottom: 5px;
-}
-ul.unstyled,
-ol.unstyled,
-ul.inline,
-ol.inline {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-ul.unstyled li,
-ol.unstyled li,
-ul.inline li,
-ol.inline li {
-  margin: 0;
-  padding: 0;
-}
-ul.inline li,
-ol.inline li {
-  display: inline-block;
 }
 dl:before,
 dl:after {
@@ -1799,8 +1782,8 @@ input::-moz-focus-inner {
 .font-italic {
   font-style: italic;
 }
-.font-bold {
-  font-style: bold;
+.font-oblique {
+  font-style: oblique;
 }
 .uppercase {
   text-transform: uppercase;
@@ -2362,6 +2345,32 @@ img.right {
 }
 .inverted {
   color: #FFFFFF;
+}
+.inverted a,
+.inverted button {
+  color: #FFFFFF;
+}
+.inverted a :hover,
+.inverted button :hover,
+.inverted a :focus,
+.inverted button :focus,
+.inverted a .active,
+.inverted button .active {
+  color: #e6e6e6;
+}
+.unstyled,
+.inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.unstyled li,
+.inline li {
+  margin: 0;
+  padding: 0;
+}
+.inline li {
+  display: inline-block;
 }
 .disabled {
   pointer-events: none;
@@ -4937,40 +4946,11 @@ img.right {
 .notice a.close:hover {
   color: #cccccc;
 }
-nav {
-  border-bottom: 1px solid #dfdfdf;
-  height: 70px;
-}
 nav.transparent {
   background: none;
 }
-nav .navbar {
-  padding: 20px 15px;
-}
 nav li {
-  margin: 0 7px;
-}
-nav li a {
-  display: block;
-  text-transform: uppercase;
-}
-nav .banner {
-  padding: 20px;
-  width: 100%;
-}
-nav .banner i {
-  color: #FFFFFF !important;
-  margin-right: 15px;
-}
-nav .banner h3 {
-  color: #FFFFFF !important;
-  margin: 0;
-}
-nav .banner.success {
-  background-color: #52B898;
-}
-nav .banner.error {
-  background-color: #E2717F;
+  margin: 0 8px;
 }
 footer {
   background: #FFFFFF;
@@ -5000,123 +4980,10 @@ section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #FFFFFF;
-  border-top: 1px solid #D3D3D3;
-  z-index: 100;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 12px;
-  line-height: 0.75rem;
-}
-nav .navbar {
-  padding: 0;
-}
-nav ul.row {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-nav li {
-  padding: 0;
-}
-nav li a {
-  padding: 20px 5;
-  letter-spacing: 0.2em;
-  font-weight: 400;
-}
-nav li a i.fa {
-  display: block;
-  margin-bottom: 7px;
-}
-nav li a.home-link {
-  color: #000000;
-}
-nav li a img {
-  height: 26px;
-}
-main {
-  margin-top: 0;
-}
-main.event .banner {
-  margin-top: -25px;
-}
-main.about h1 {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 48px;
-  line-height: 3rem;
-}
-.form label {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.form input {
-  height: 40px;
-  margin-bottom: 10px;
-}
-.form .button {
-  margin-bottom: 10px;
-}
 @media only screen and (min-width: 740px) {
   section {
     padding-top: 80px;
     padding-bottom: 80px;
-  }
-  nav {
-    top: 0;
-    bottom: initial;
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 40px;
-  }
-  nav .navbar {
-    padding: 15px;
-  }
-  nav a.brand {
-    display: inline-block;
-    height: 40px;
-    padding: 0;
-    margin: 0;
-  }
-  nav a.brand img {
-    max-height: 100%;
-  }
-  nav li {
-    width: auto;
-  }
-  nav li a {
-    position: relative;
-    display: block;
-    margin: 0 1em;
-    padding: 0;
-    text-align: center;
-    color: #A0A0A0;
-    transition: color 0.3s;
-    font-weight: 400;
-  }
-  nav li a:hover,
-  nav li a:focus {
-    color: #7a7a7a;
-  }
-  nav li a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    transform: scale3d(0, 1, 1);
-    transition: transform 0.1s;
-  }
-  nav li.active a::before {
-    transform: scale3d(1, 1, 1);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 0.3s;
   }
 }
 @media only screen and (min-width: 980px) {
