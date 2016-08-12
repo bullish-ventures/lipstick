@@ -2,9 +2,9 @@
 
 > You can put lipstick on a pig and also on websites.
 
-# A micro, responsive CSS framework that makes websites look pretty.
+### A micro, responsive CSS framework that makes websites look pretty.
 
-Lightweight and minimal. Sane defaults allow for very few overrides. Comes with some sexy default themes.
+Lightweight and minimal. Sane defaults allow for very few overrides. Comes with some sexy default themes and common components.
 
 [![Build Status](https://travis-ci.org/bullish-ventures/lipstick.svg?branch=master)](https://travis-ci.org/bullishventures/lipstick)
 
