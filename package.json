@@ -1,0 +1,62 @@
+{
+  "name": "lipstick",
+  "description": "A micro, responsive CSS framework that makes websites look pretty.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/bullish-ventures/lipstick",
+  "main": "lib/",
+  "keywords": [
+    "css",
+    "less",
+    "lipstick",
+    "responsive",
+    "micro",
+    "framework"
+  ],
+  "license": "Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bullish-ventures/lipstick.git"
+  },
+  "author": {
+    "name": "Bullish Ventures Ltd.",
+    "email": "hello@bullishventures.com",
+    "url": "https//bullishventures.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/bullish-ventures/lipstick/issues"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "scripts": {
+    "prepublish": "npm run compile",
+    "publish": "git push origin && git push origin --tags",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "release:pre": "npm publish --tag next",
+    "clean": "rimraf -rf dist/",
+    "build": "lessc src/less/main.less dist/css/main.css",
+    "build:min": "npm run build | cssmin > dist/css/main.css",
+    "compile": "npm run clean && npm run lint && npm run build && npm run build:min",
+    "watch": "watch 'npm run build' src/less & npm run livereload",
+    "livereload": "livereload dist/",
+    "lint": "lessc --lint src/less/main.less",
+    "test": "npm run compile"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "dependencies": {
+    "font-awesome": "^4.6.3"
+  },
+  "devDependencies": {
+    "cssmin": "^0.4.3",
+    "hashmark": "^3.1.0",
+    "less": "^2.7.1",
+    "livereload": "^0.5.0",
+    "rimraf": "^2.5.4",
+    "watch": "^0.19.1"
+  }
+}

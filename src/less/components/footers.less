@@ -1,0 +1,31 @@
+footer {
+  background: @base-footer-background-color;
+  padding: 100px 0;
+  color: white;
+
+  ul {
+    li {
+      font-weight: 600;
+
+      a {
+        display: inline-block;
+        font-weight: 300;
+        padding: 5px 0;
+        color: @light-grey;
+
+        &:hover,
+        &:focus {
+          color: lighten(@light-grey, 10%);
+        }
+      }
+    }
+  }
+
+  hr {
+    background: fade(@black, 20%);
+  }
+
+  .copyright {
+    color: @grey;
+  }
+}
