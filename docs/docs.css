@@ -1,0 +1,19 @@
+nav {
+  background: #da6b8f;
+}
+
+nav .logo {
+  height: 100px;
+  width: 100px;
+}
+
+nav ul {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+nav ul.inline li {
+  padding: 0 15px;
+  line-height: 100px;
+}
