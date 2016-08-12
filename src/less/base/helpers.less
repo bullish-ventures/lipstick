@@ -30,7 +30,7 @@
 // Font Styles
 .font-normal { font-style: normal; }
 .font-italic { font-style: italic; }
-.font-bold { font-style: bold; }
+.font-oblique { font-style: oblique; }
 
 // Text Modifications
 .uppercase { text-transform: uppercase; }
@@ -319,7 +319,39 @@ img.right {
 }
 
 .full { width: 100%; }
-.inverted { color: @base-inverted-color; }
+.inverted {
+  color: @base-inverted-color;
+
+  a,
+  button {
+    color: @base-inverted-color;
+
+    :hover,
+    :focus,
+    .active {
+      color: darken(@base-inverted-color, 10%);
+    }
+  }
+}
+
+// Lists
+.unstyled,
+.inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.inline {
+  li {
+    display: inline-block;
+  }
+}
 
 // Disable Element
 .disabled {
