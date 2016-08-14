@@ -49,7 +49,6 @@
     "dist": "dist"
   },
   "dependencies": {
-    "font-awesome": "^4.6.3"
   },
   "devDependencies": {
     "cssmin": "^0.4.3",
@@ -57,6 +56,7 @@
     "less": "^2.7.1",
     "livereload": "^0.5.0",
     "rimraf": "^2.5.4",
-    "watch": "^0.19.1"
+    "watch": "^0.19.1",
+    "font-awesome": "^4.6.3"
   }
 }
