@@ -280,30 +280,56 @@ img.cover,
 
 img.avatar,
 .img-avatar {
-  @avatar-size: 120px;
+  height: 120px;
+  width: 120px;
+
+  &.circle {
+    .rounded(120px / 2);
+  }
 
   &.x-small {
-    @avatar-size: 45px;
+    height: 45px;
+    width: 45px;
+
+    &.circle {
+      .rounded(45px / 2);
+    }
   }
 
   &.small {
-    @avatar-size: 90px;
+    height: 90px;
+    width: 90px;
+
+    &.circle {
+      .rounded(90px / 2);
+    }
   }
 
   &.medium {
-    @avatar-size: 120px;
+    height: 120px;
+    width: 120px;
+
+    &.circle {
+      .rounded(120px / 2);
+    }
   }
 
   &.large {
-    @avatar-size: 180px;
+    height: 180px;
+    width: 180px;
+
+    &.circle {
+      .rounded(180px / 2);
+    }
   }
 
   &.x-large {
-    @avatar-size: 240px;
-  }
-  
-  .circle {
-    .rounded(@avatar-size / 2);
+    height: 240px;
+    width: 240px;
+
+    &.circle {
+      .rounded(240px / 2);
+    }
   }
 }
 
@@ -335,8 +361,8 @@ img.right {
 }
 
 // Lists
-.unstyled,
-.inline {
+.list-unstyled,
+.list-inline {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -347,7 +373,7 @@ img.right {
   }
 }
 
-.inline {
+.list-inline {
   li {
     display: inline-block;
   }
@@ -366,11 +392,13 @@ img.right {
   position: relative;
   margin-top: .5em;
   margin-bottom: .5em;
+
   label {
     padding-left: 20px;
     padding-top: 0;
     display: inline-block;
   }
+  
   input[type="checkbox"],
   input[type="radio"] {
     position: absolute;
