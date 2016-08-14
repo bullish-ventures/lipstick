@@ -1,7 +1,7 @@
 {
   "name": "lipstickless",
   "description": "A micro, responsive CSS framework written in LESS that will turn heads.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "homepage": "https://github.com/bullish-ventures/lipstick",
   "main": "lib/",
   "keywords": [
@@ -48,8 +48,7 @@
   "directories": {
     "dist": "dist"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "cssmin": "^0.4.3",
     "hashmark": "^3.1.0",
