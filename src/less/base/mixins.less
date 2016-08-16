@@ -193,13 +193,13 @@
 }
 
 .opacity (@opacity: 0.5) {
-  -moz-opacity: @opacity;
-  -khtml-opacity: @opacity;
-  -webkit-opacity: @opacity;
+  // -moz-opacity: @opacity;
+  // -khtml-opacity: @opacity;
+  // -webkit-opacity: @opacity;
   opacity: @opacity;
-  @opperc: @opacity * 100;
-  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
-  filter: ~"alpha(opacity=@{opperc})";
+  // @opperc: @opacity * 100;
+  // -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+  // filter: ~"alpha(opacity=@{opperc})";
 }
 
 // .placeholder (@color, @font-style) {
@@ -262,11 +262,6 @@
    -ms-transform: translate3d(@x, @y, @z); //ie10+
     -o-transform: translate3d(@x, @y, @z);
        transform: translate(@x, @y);
-}
-
-.box-shadow (@x:0, @y:0, @blur:0, @z:0, @color:black ) {
-  -webkit-box-shadow: @x @y @blur @z @color; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-          box-shadow: @x @y @blur @z @color;
 }
 
 .font-face (@fontname, @fontfile) {

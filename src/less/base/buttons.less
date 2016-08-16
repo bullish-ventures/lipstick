@@ -5,8 +5,9 @@
 // Custom Buttons
 
 .button {
+  display: inline-block;
   outline: none;
-  padding: 0.8em 1em;
+  padding: 0.6em 1.2em;
   background: darken(@white, 2%);
   border: 1px solid @base-border-color;
   color: @base-font-color;
@@ -17,28 +18,54 @@
   line-height: normal;
   vertical-align: middle;
   font-weight: 500;
+  .font-size(20);
   .rounded(@base-border-radius);
   .transition(background, 0.2s);
   .transition(color, 0.2s);
 
   &.x-small {
+    .font-size(16);
     padding: 0.4em 0.6em;
+
+    &.pill {
+      .rounded(0.6em);
+    }
   }
 
   &.small {
-    padding: 0.6em 0.8em;
+    .font-size(18);
+    padding: 0.5em 1em;
+
+    &.pill {
+      .rounded(1em);
+    }
   }
 
   &.medium {
-    padding: 0.8em 1em;
+    .font-size(20);
+    padding: 0.6em 1.2em;
+
+    &.pill {
+      .rounded(1.2em);
+    }
   }
 
   &.large {
-    padding: 1em 1.2em;
+    .font-size(26);
+    padding: 0.7em 1.6em;
+
+    &.pill {
+      .rounded(1.6em);
+    }
   }
 
   &.x-large {
-    padding: 1.2em 1.4em;
+    .font-size(32);
+    padding: 0.8em 2em;
+
+    &.pill {
+      .rounded(2em);
+    }
   }
 
   &.disabled,
@@ -130,7 +157,7 @@
   &.transparent {
     background: none;
     color: @white;
-    border: 1px solid darken(@white, 5%);
+    border: 2px solid darken(@white, 5%);
     
     &:hover:not(.disabled):not([disabled]),
     &:focus:not(.disabled):not([disabled]),
