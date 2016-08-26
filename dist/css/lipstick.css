@@ -106,7 +106,7 @@ h5,
 h6,
 .h6 {
   font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  margin: 0 0 0.8em 0;
+  margin: 0.8em 0 0.8em 0;
 }
 h1,
 .h1 {
@@ -676,6 +676,7 @@ input::-moz-focus-inner {
 .button:hover:not(.disabled):not([disabled]),
 .button:focus:not(.disabled):not([disabled]),
 .button.active:not(.disabled):not([disabled]) {
+  color: #878787;
   background: #e6e6e6;
 }
 .button.link {
@@ -692,6 +693,8 @@ input::-moz-focus-inner {
   outline: 0;
 }
 .button.primary {
+  color: #FFFFFF;
+  border: none;
   background: #dc75ac;
 }
 .button.primary:hover:not(.disabled):not([disabled]),
@@ -701,6 +704,8 @@ input::-moz-focus-inner {
   background: #d761a0;
 }
 .button.secondary {
+  color: #FFFFFF;
+  border: none;
   background: #44A8DB;
 }
 .button.secondary:hover:not(.disabled):not([disabled]),
@@ -710,6 +715,8 @@ input::-moz-focus-inner {
   background: #2f9ed7;
 }
 .button.error {
+  color: #FFFFFF;
+  border: none;
   background: #E2717F;
 }
 .button.error:hover:not(.disabled):not([disabled]),
@@ -719,6 +726,8 @@ input::-moz-focus-inner {
   background: #de5c6c;
 }
 .button.warning {
+  color: #FFFFFF;
+  border: none;
   background: #F7DB48;
 }
 .button.warning:hover:not(.disabled):not([disabled]),
@@ -728,6 +737,8 @@ input::-moz-focus-inner {
   background: #f6d630;
 }
 .button.success {
+  color: #FFFFFF;
+  border: none;
   background: #52B898;
 }
 .button.success:hover:not(.disabled):not([disabled]),
@@ -735,11 +746,6 @@ input::-moz-focus-inner {
 .button.success.active:not(.disabled):not([disabled]) {
   color: #f2f2f2;
   background: #46ab8b;
-}
-.button.primary,
-.button.secondary .button.error .button.warning .button.success {
-  color: #FFFFFF;
-  border: none;
 }
 .button.transparent {
   background: none;
@@ -2306,7 +2312,7 @@ img.cover,
   background: rgba(0, 0, 0, 0.3);
 }
 .opacity.dark {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 .opacity.light {
   background: rgba(255, 255, 255, 0.3);
@@ -2796,6 +2802,52 @@ img.right {
   color: #FFFFFF;
 }
 .notice a.close:hover {
+  color: #cccccc;
+}
+.banner {
+  min-height: 60px;
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-all 0.2s ease-out;
+  -moz-transition: -moz-all 0.2s ease-out;
+  -o-transition: -o-all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.banner h1,
+.banner h2,
+.banner h3,
+.banner h4,
+.banner h5,
+.banner h6,
+.banner p {
+  color: #FFFFFF;
+}
+.banner.success {
+  background-color: #52B898;
+}
+.banner.warning {
+  background-color: #F7DB48;
+}
+.banner.error {
+  background-color: #E2717F;
+}
+.banner.active {
+  transform: translateY(0);
+}
+.banner a.close {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  padding: 0 4px 2px;
+  border: 1px solid;
+  border-radius: 100%;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+  color: #FFFFFF;
+}
+.banner a.close:hover {
   color: #cccccc;
 }
 nav.navbar {

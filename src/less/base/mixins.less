@@ -228,6 +228,13 @@
   transition-duration: @duration;
 }
 
+.transition-delay (@delay: 0.2s) {
+  -moz-transition-delay: @delay;
+  -webkit-transition-delay: @delay;
+  -o-transition-delay: @delay;
+  transition-delay: @delay;
+}
+
 .transform (...) {
   -webkit-transform: @arguments;
   -moz-transform: @arguments;
