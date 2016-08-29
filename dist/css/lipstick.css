@@ -2698,28 +2698,43 @@ img.right {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  display: none;
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1001;
   will-change: transform;
 }
 .modal-wrapper .modal {
   position: relative;
   color: #333333;
-  display: none;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+.modal-wrapper .modal .modal-header {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+.modal-wrapper .modal .modal-footer {
+  border-top: 1px solid #ddd;
+  padding: 15px;
 }
 .modal-wrapper .modal a.close {
   position: absolute;
-  padding: 6px 12px 9px;
+  padding: 0.2em 0.7em;
   border: 1px solid;
-  border-radius: 20px;
+  border-radius: 30px;
   font-weight: 300;
-  font-size: 27px;
+  font-size: 14px;
+  line-height: 14px;
+  -webkit-transition: -webkit-color 0.2s ease-out;
+  -moz-transition: -moz-color 0.2s ease-out;
+  -o-transition: -o-color 0.2s ease-out;
+  transition: 'color' 0.2s ease-out;
 }
 .modal-wrapper .modal section.modal-content {
   padding: 20px;
 }
 .modal-wrapper:not(.fullscreen) .modal {
+  min-width: 300px;
   min-height: 300px;
   max-width: 434px;
   margin: 60px auto 0;
@@ -2729,9 +2744,13 @@ img.right {
   border-radius: 5px;
 }
 .modal-wrapper:not(.fullscreen) .modal a.close {
-  right: -45px;
-  top: -30px;
-  color: #FFFFFF;
+  right: 15px;
+  top: 15px;
+  color: #A0A0A0;
+}
+.modal-wrapper:not(.fullscreen) .modal a.close:hover,
+.modal-wrapper:not(.fullscreen) .modal a.close:focus {
+  color: #333333;
 }
 .modal-wrapper.fullscreen {
   background: #FFFFFF;
