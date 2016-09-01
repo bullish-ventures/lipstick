@@ -333,7 +333,7 @@ fieldset label,
 legend label {
   position: absolute;
   left: 5px;
-  top: -5px;
+  top: 3px;
   padding: 0 5px;
   background: white;
   color: #A0A0A0;
@@ -2698,6 +2698,7 @@ img.right {
   left: 0;
   right: 0;
   bottom: 0;
+  padding: 15px;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1001;
   will-change: transform;
